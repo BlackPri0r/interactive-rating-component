@@ -14,7 +14,7 @@ export default function RatingComponent() {
     const [chosenNumber, setNumber] = useState(1);
 
     const handleSetSubmitted = () => {
-        setSubmitted(!isSubmitted);
+        setSubmitted((previous) => !previous);
     };
 
     return (

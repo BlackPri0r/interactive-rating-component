@@ -4,7 +4,6 @@ import Button from './Button';
 type ThankYouProps = {
   OnClick: () => void;
   chosenNumber: number;
-
 }
 
 function ThankYou({ OnClick, chosenNumber }: ThankYouProps) {
@@ -22,7 +21,7 @@ function ThankYou({ OnClick, chosenNumber }: ThankYouProps) {
           We appreaciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
         </p>
   
-        <Button OnClick={OnClick} label={"Rate Again"}></Button>
+        <Button OnClick={OnClick}>Rate Again</Button>
       </div>
     )
   }

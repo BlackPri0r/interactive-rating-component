@@ -41,7 +41,7 @@ export default function Submission({ OnClick }: SubmissionProps) {
                 ))}
             </ul>
 
-            <Button OnClick={OnClick} label={"Submit"} />
+            <Button OnClick={OnClick}>Submit</Button>
         </div>
     );
 }
