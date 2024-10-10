@@ -1,14 +1,14 @@
-
-interface buttonProp{
-    number: number;
-    setNumber: (value: number) => void;
+type ButtonProps = {
+  OnClick: () => void;
+  label: string;
 }
 
-function Button({ number, setNumber }: buttonProp) {
-    return (
-      <button onClick={() => setNumber(number)} className="bg-gray-700 h-14 w-14 rounded-full pt-1 text-light-grey font-overpass font-bold focus:bg-white focus:text-black select-none">
-        {number}
-      </button>
-    );
-  }
-export default Button;
+export default function Button({OnClick, label}: ButtonProps){
+  return(
+    <div className='text-center'>
+        <button onClick={OnClick} className='bg-orange w-full font-overpass font-bold text-black uppercase tracking-wide pt-2 pb-2 rounded-full hover:bg-white transition'>
+          {label}
+        </button>
+      </div>
+  )
+}
